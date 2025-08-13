@@ -2,26 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-gradient-to-b from-[#e4f5ff] via-white to-white;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  .nav-btn {
+    @apply flex items-center justify-center w-8 h-8 rounded-full mb-4 transition-all duration-200;
+  }
+  
+  .nav-btn-active {
+    @apply bg-[#fff] text-orange-500 shadow-md;
+  }
+  
+  .nav-btn-inactive {
+    @apply hover:bg-[#eaf6fd] text-gray-600;
+  }
+  
+  .message-bot {
+    @apply p-5 rounded-2xl text-base leading-relaxed bg-blue-50 text-gray-800;
+  }
+  
+  .message-user {
+    @apply p-5 rounded-2xl text-base leading-relaxed bg-white shadow-lg text-gray-800 border border-gray-100;
+  }
+  
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-slate-100 rounded-lg;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-lg hover:bg-slate-400;
   }
 }
