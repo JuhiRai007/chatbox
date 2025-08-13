@@ -1,6 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Chat Interface Project
 
-## Getting Started
+A modern, responsive Next chat interface with dynamic states and smooth animations built with Next.js, featuring an adaptive chat system that can be expanded, minimized, or collapsed based on user interaction.
+
+## 🚀 Features
+
+- **Dynamic Chat States**: Three distinct chat modes - expanded, minimized, and collapsed
+- **Responsive Design**: Fully responsive across desktop and mobile devices
+- **Smooth Animations**: Powered by Framer Motion for seamless transitions
+- **Interactive Navigation**: Sidebar navigation with active state management
+- **Multi-Page Support**: Separate pages with persistent chat functionality
+- **Voice & File Upload**: Built-in support for voice messages and file uploads
+- **Customizable Options**: Dropdown selectors for user preferences
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14+ (App Router)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Language**: JavaScript/JSX
+
+
+
+## 🎨 Components
+
+### ChatInterface
+The main chat component that handles three different states:
+
+- **Expanded**: Full-screen chat interface with complete functionality
+- **Minimized**: Side panel chat window for multitasking
+- **Collapsed**: Floating chat icon with pulse animation
+
+**Key Features:**
+- Message history display
+- Interactive input area with file upload and voice recording
+- Customizable dropdown options (User, Briefcase, Location, Calendar)
+- Smooth state transitions with animation variants
+
+### NavigationBar
+A vertical sidebar navigation component featuring:
+
+- Fixed positioning with gradient background
+- Active state management
+- Hover and tap animations
+- Main navigation (Home, Chat) and utility icons (Settings, Help, Mail, Logout)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
 
 First, run the development server:
 
@@ -14,23 +68,52 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+git clone <your-repo-url>
+cd chat-interface-project
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+2. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+npm install
+or
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+yarn install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Start the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+npm run dev
+
+
+
+4. Open [http://localhost:8080](http://localhost:8080) in your browser
+
+## 📱 Usage
+
+### Chat States
+- **Home Page**: Chat starts in expanded mode
+- **Secondary Page**: Chat starts in minimized mode
+- **Collapsed State**: Click the floating icon to minimize
+- **Navigation**: Use sidebar buttons to switch between pages
+
+### Interactive Elements
+- **Send Messages**: Type in the input field and click send
+- **File Upload**: Click the upload icon to attach files
+- **Voice Messages**: Click the microphone icon for voice input
+- **Options**: Use dropdown menus to set preferences
+
+## ⚙️ Port Configuration
+
+This application is configured to run on **port 8080**. The port settings are defined in `package.json`:
+```
+{
+"scripts": {
+"dev": "next dev -p 8080",
+"build": "next build",
+"start": "next start -p 8080",
+"lint": "next lint"
+}
+}
+```
