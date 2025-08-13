@@ -54,7 +54,9 @@ A vertical sidebar navigation component featuring:
 ### Installation
 
 1. Clone the repository:
-
+```
+git clone https://github.com/JuhiRai007/chatbox.git
+```
 
 First, run the development server:
 
